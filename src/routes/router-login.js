@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const bcrypt = require("bcrypt");
 const db = require("../../configs/database");
 
 
@@ -16,8 +15,8 @@ router.post("/login", (req, res) => {
             const isMatch = await bcrypt.compare(password, user.password);
 
             if (isMatch) {
-                req.session.userId = user.id; 
-                res.redirect("/dashboard"); 
+                req.session.userId = user.id;
+                res.redirect("/dashboard");
             } else {
                 res.send("Incorrect password");
             }
