@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Hewan</title>
+</head>
+
+<body>
+    <h1>Edit Hewan</h1>
+    <form action="<%= url + 'pupuk/update/' + pupuk.id %>" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" value="<%= pupuk.name %>" required>
+        <br>
+        <label for="pupuk">Pupuk Tanaman:</label>
+        <input type="text" name="pupuk" id="pupuk" value="<%= pupuk.pupuk %>" required>
+        <br>
+        <label for="umur">Umur Tanaman:</label>
+        <input type="text" name="umur" id="umur" value="<%= pupuk.umur %>" required>
+        <br>
+        <button type="submit">Update</button>
+    </form>
+</body>
+
+</html>
